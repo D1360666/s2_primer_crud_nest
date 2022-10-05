@@ -8,7 +8,7 @@ import { LibroSchema } from './libros/schemas/libro.schema';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb:localhost/crudNest'),
+    MongooseModule.forRoot('mongodb://localhost:27017/crudNest'),
     MongooseModule.forFeature([{ name: 'Libro', schema: LibroSchema}])
   ],
   controllers: [AppController, LibrosController],
